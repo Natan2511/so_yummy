@@ -1,0 +1,85 @@
+@import '../../main.scss';
+
+.heroBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 132px;
+  gap: 14px;
+
+  height: 100%;
+
+  background-image: url('../../assets/image/mainPage/m-plate.png');
+  background-size: 320px 296px;
+  background-position: center 322px;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    width: 704px;
+    gap: 24px;
+    padding-top: 226px;
+
+    background-image: url('../../assets/image/mainPage/t-plate.png');
+    background-size: 370px 345px;
+    background-position: right -8px top 170px;
+    background-repeat: no-repeat;
+  }
+
+  @include desktop {
+    width: 1240px;
+    gap: 14px;
+    padding-top: 226px;
+
+    background-image: url('../../assets/image/mainPage/d-plate.png');
+    background-size: 578px 539px;
+    background-position: calc(100% - 84px) 126px;
+    background-repeat: no-repeat;
+  }
+}
+
+.heroTitleGreen {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -0.005em;
+
+  color: $mainAccentColor;
+
+  @include tablet {
+    font-size: 72px;
+    line-height: 1;
+  }
+
+  @include desktop {
+    font-size: 100px;
+    line-height: 1;
+  }
+}
+
+.heroTitle {
+  color: var(--darkToWhite);
+}
+
+.heroDiscription {
+  align-self: center;
+  max-width: 248px;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.02em;
+  color: var(--mainTextColor);
+
+  @include tablet {
+    max-width: 362px;
+    text-align: start;
+    align-self: flex-start;
+  }
+
+  @include desktop {
+    max-width: 465px;
+    font-size: 18px;
+    line-height: calc(24 / 18);
+  }
+}

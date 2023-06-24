@@ -1,0 +1,97 @@
+@import '../../main.scss';
+
+.hero {
+  display: flex;
+  justify-content: center;
+  background-color: var(--mainBgColorWhite);
+
+  position: relative;
+  min-width: 375px;
+  width: 100vw;
+  height: 777px;
+  background-color: var(--mainBgColorWhite);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 375px;
+    height: 814px;
+    background-image: url('../../assets/image/mainPage/m-spinach-bottom.png'),
+      url('../../assets/image/mainPage/m-bg-green.png');
+    background-position: top 35px left, right top 25px, right top 148px;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: '';
+    width: 48px;
+    height: 202px;
+    background-image: url('../../assets/image/mainPage/m-spinach-top.png');
+    background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    display: flex;
+    min-width: 768px;
+    height: 640px;
+    gap: 18px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 583px;
+      height: 640px;
+      background-image: url('../../assets/image/mainPage/t-spinach-bottom.png'),
+        url('../../assets/image/mainPage/t-bg-green.png');
+      background-position: right top, right top;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 67px;
+      height: 323px;
+      background-image: url('../../assets/image/mainPage/t-spinach-top.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include desktop {
+    min-width: 1440px;
+    height: 800px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 913px;
+      height: 800px;
+      background-image: url('../../assets/image/mainPage/d-spinach-bottom.png'),
+        url('../../assets/image/mainPage/d-bg-green.png');
+      background-position: right top, right top;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 116px;
+      height: 398px;
+      background-image: url('../../assets/image/mainPage/d-spinach-top.png');
+      background-repeat: no-repeat;
+    }
+  }
+}
